@@ -24,4 +24,11 @@ export default class Cliente {
   get idade() {
     return this.#idade;
   }
+
+  public toJSON(): any {
+    return {
+      nome: this.nome,
+      idade: this.idade,
+    };
+  }
 }
